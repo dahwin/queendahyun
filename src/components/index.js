@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import Journey from "./journey";
+import Journey from "./Journey";
 import Dahyun from "./Dahyun";
 import Business from "./Business";
 import Clients from "./Clients";
