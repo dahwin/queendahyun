@@ -1,7 +1,7 @@
 import { bill } from "../assets";
 import styles, { layout } from "../style";
 
-const Billing = () => (
+const Journey = () => (
   <section id="product" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
       <img src={bill} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
@@ -14,7 +14,7 @@ const Billing = () => (
 
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Your Journy
+        Your Journey
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
       Unleash the power of the most groundbreaking software ever created! 
@@ -35,4 +35,4 @@ const Billing = () => (
   </section>
 );
 
-export default Billing;
+export default Journey;
