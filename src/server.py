@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 import uvicorn
-import nest_asyncio
-import torch
+
+
 from llama_cpp import Llama
-nest_asyncio.apply()
+
 
 dahwin = FastAPI()
 
