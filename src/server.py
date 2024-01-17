@@ -15,13 +15,13 @@ def run_llm(name):
     try:
         if llm:
             print(True)
-            # llm = Llama(model_path=r"C:\Users\ALL USER\Desktop\dahyun\cpu_llm\llama.cpp\models\zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
+            # llm = Llama(model_path="/mnt/c/Users/ALL USER/Desktop/dahyun/cpu_llm/llama.cpp/models/zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
             del llm
             
-            llm = Llama(model_path=r"C:\Users\ALL USER\Desktop\dahyun\cpu_llm\llama.cpp\models\zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
+            llm = Llama(model_path="/mnt/c/Users/ALL USER/Desktop/dahyun/cpu_llm/llama.cpp/models/zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
     except:
         print(False)
-        llm = Llama(model_path=r"C:\Users\ALL USER\Desktop\dahyun\cpu_llm\llama.cpp\models\zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
+        llm = Llama(model_path=r"/mnt/c/Users/ALL USER/Desktop/dahyun/cpu_llm/llama.cpp/models/zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
 
     print(llm)
     return True
