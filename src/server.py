@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
 
-
 from llama_cpp import Llama
 
 
@@ -12,25 +11,29 @@ def index():
     return {'Dahwin Universe': 'Hello Everything!'}
 def run_llm(name):
     global llm
+    path = f"/mnt/c/models/{name}.gguf"
     try:
+        
         if llm:
             print(True)
-            # llm = Llama(model_path="/mnt/c/Users/ALL USER/Desktop/dahyun/cpu_llm/llama.cpp/models/zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
+            print(f"model {name}.gguf has been loaded")
+            # llm = Llama(model_path=r"C:\Users\ALL USER\Desktop\dahyun\cpu_llm\llama.cpp\models\zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
             del llm
             
-            llm = Llama(model_path="/mnt/c/Users/ALL USER/Desktop/dahyun/cpu_llm/llama.cpp/models/zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
+            llm = Llama(model_path=path,n_gpu_layers =35, chat_format="llama-2")
+
     except:
         print(False)
-        llm = Llama(model_path=r"/mnt/c/Users/ALL USER/Desktop/dahyun/cpu_llm/llama.cpp/models/zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
+        llm = Llama(model_path=r"/mnt/c/Users/ALL USER/Desktop/dahyun/cpu_llm/llama.cpp/models/zephyr-7b-alpha.Q2_K.gguf",n_gpu_layers =35, chat_format="llama-2")
 
-    print(llm)
+    # print(llm)
     return True
-def get_tensor(name):
+def get_token(name):
     user_prompt =name
     print(f"user_prompt{user_prompt}")
     result = llm.create_chat_completion(
           messages = [
-              {"role": "system", "content": "You are an assistant. for questioin & anser .QNA"},
+              {"role": "system", "content":  "You are an assistant."},
               {
                   "role": "user",
                   "content": f"{user_prompt}"
@@ -43,7 +46,7 @@ def get_tensor(name):
 @dahwin.post('/name')
 def name(data: dict):
     name = data.get('dahwin')
-    name = get_tensor(name)
+    name = get_token(name)
     return name
 @dahwin.post('/llm')
 def name(data: dict):
