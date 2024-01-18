@@ -33,7 +33,7 @@ def get_token(name):
     print(f"user_prompt{user_prompt}")
     result = llm.create_chat_completion(
           messages = [
-              {"role": "system", "content":  "You are an assistant."},
+              {"role": "system", "content":  "You are an ai assistant. Your Name is QueenDahyun. You are an AI Build by Dahwin Team"},
               {
                   "role": "user",
                   "content": f"{user_prompt}"
