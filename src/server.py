@@ -17,14 +17,15 @@ def run_llm(name):
         if llm:
             print(True)
             print(f"model {name}.gguf has been loaded")
-            # llm = Llama(model_path=r"C:\Users\ALL USER\Desktop\dahyun\cpu_llm\llama.cpp\models\zephyr-7b-alpha.Q2_K.gguf", chat_format="llama-2")
+
             del llm
             
             llm = Llama(model_path=path,n_gpu_layers =35, chat_format="llama-2")
 
     except:
+        del llm
         print(False)
-        llm = Llama(model_path=r"/mnt/c/Users/ALL USER/Desktop/dahyun/cpu_llm/llama.cpp/models/zephyr-7b-alpha.Q2_K.gguf",n_gpu_layers =35, chat_format="llama-2")
+        llm = Llama(model_path=path,n_gpu_layers =35, chat_format="llama-2")
 
     # print(llm)
     return True
