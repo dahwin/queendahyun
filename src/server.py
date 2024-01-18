@@ -23,7 +23,6 @@ def run_llm(name):
             llm = Llama(model_path=path,n_gpu_layers =35, chat_format="llama-2")
 
     except:
-        del llm
         print(False)
         llm = Llama(model_path=path,n_gpu_layers =35, chat_format="llama-2")
 
