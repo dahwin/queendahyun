@@ -48,12 +48,12 @@ export const stats = [
   {
     id: "stats-1",
     title: "",
-    value: "Comming Soon",
+    value: "Full Version Comming Soon",
   },
   {
     id: "stats-2",
     title: "",
-    value: "Early January",
+    value: "January to February",
   },
   {
     id: "stats-3",
