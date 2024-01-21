@@ -7,7 +7,7 @@ const DownloadButton = () => {
     try {
       const link = document.createElement('a');
       link.href =
-        'https://media.githubusercontent.com/media/dahwin/git_exe/master/qd.exe?download=true';
+        'https://media.githubusercontent.com/media/dahwin/git_exe/master/queendahyun.exe?download=true';
       link.setAttribute('download', 'queendahyun.exe');
       document.body.appendChild(link);
       link.click();
