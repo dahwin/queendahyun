@@ -53,7 +53,7 @@ export const stats = [
   {
     id: "stats-2",
     title: "",
-    value: "January to February",
+    value: "February",
   },
   {
     id: "stats-3",
