@@ -48,16 +48,16 @@ export const stats = [
   {
     id: "stats-1",
     title: "",
-    value: "Full Version Comming Soon",
+    value: "Full Version Comming Soon In March 2024",
   },
   {
     id: "stats-2",
     title: "",
-    value: "February",
+    value: "To make the user experience as smooth as possible, we have delays!",
   },
   {
     id: "stats-3",
-    title: "2024",
+    title: "We sincerely apologize for this delay",
     value: "",
   },
 ];
