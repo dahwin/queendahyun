@@ -48,7 +48,7 @@ export const stats = [
   {
     id: "stats-1",
     title: "",
-    value: "Full Version Comming Soon In March 2024",
+    value: "Full Version Comming Soon In May 2024",
   },
   {
     id: "stats-2",
